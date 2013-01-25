@@ -1,4 +1,4 @@
-team-plex
+TEAM-PLEX
 =========
 
-TEAM-PLEX
+게임은 도전이다.
