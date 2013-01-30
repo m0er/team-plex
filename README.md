@@ -1,4 +1,4 @@
-TEAM-PLEX
+TEAM-PLEX 1.0
 =========
 
-게임은 도전이다.
+Brand new community.
