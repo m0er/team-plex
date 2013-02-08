@@ -16,3 +16,6 @@ TEAM-PLEX는 게이머를 위한 깊이있는 커뮤니티를 제공해 사용�
 `<major>.<minor>.<patch>`
 
 버전관리 지침: [http://www.semver.org](http://www.semver.org)
+
+## Feedback
+버그 및 피드백은 Issue 등록하고 마일스톤과 레이블 추가
