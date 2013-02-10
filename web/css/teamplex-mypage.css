@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+/* Select2 placeholder fix */
+#mypageInfo .select2-container {width: 100% !important; margin-bottom: 10px;}
+
+#mypageInfo .profile-image {max-width: 160px; overflow: hidden; float: left; margin-right: 10px;}
+#mypageInfo .profile-image img {height: 100%;}
+#mypageInfo .post-listing {width: 900px;}
+#mypageInfo form h1 {font-size: 30px;}
+
+#mypageInfo form .thumbnails .span3 {width: 160px;}
+#mypageInfo form .thumbnails li {margin-bottom: 0px;}
+#mypageInfo form #changeProfileImageButton {margin-left: 10px;}
+#mypageForm .input-tags.controls {width: 285px;}
+
+#posts {margin-left: 20px;}
+#posts .row {margin-left: 0; width: inherit;}
+#posts .row .span3 {width: 200px;}

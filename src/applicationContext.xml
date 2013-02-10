@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:component-scan base-package="com.teamplex">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:exclude-filter type="annotation" expression="com.teamplex.spring.annotation.ServletComponent"/>
+	</context:component-scan>
+	
+	<context:property-placeholder location="classpath:/com/teamplex/config/teamplex.properties"/>
+	
+	<mongo:db-factory dbname="teamplex"/>
+	
+	<!--
+		Spring Data MongoDB 레퍼런스 메뉴얼에 나와있는데로 하면 에러남..
+		아래와 같이 MongoMappingContext 빈을 두고 컨버터는 <bean> 으로 등록시켜야됨. 
+		그리고 MongoTemplate 아규먼트도 팩토리와 컨버터로 바꿔줘야 함.
+	-->
+	<!-- <bean id="mappingContext" class="org.springframework.data.mongodb.core.mapping.MongoMappingContext"/> -->
+	
+	<!-- <mongo:mapping-converter mapping-context-ref="mappingContext">
+		<mongo:custom-converters>
+			<mongo:converter>
+				<bean class="com.raptoz.spring.data.converter.RoleTypeReaderConverter"/>
+			</mongo:converter>
+			<mongo:converter>
+				<bean class="com.raptoz.spring.data.converter.RoleTypeWriteConverter"/>
+			</mongo:converter>
+		</mongo:custom-converters>
+	</mongo:mapping-converter> -->
+	
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
+		<!-- <constructor-arg name="mongoConverter" ref="mappingConverter"/> -->
+	</bean>
+	
+	<mongo:repositories base-package="com.teamplex"/>
+	
+</beans>

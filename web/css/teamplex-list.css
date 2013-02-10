@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+#users {min-width: 430px;}
+#users article {border: 1px solid black; margin-left: 0px; margin-bottom: 10px; box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4); background-color: #FFF; width: 418px;}
+#users .usertag {padding-top: 10px; margin-left: 2px;}
+#users .usertag ul li ul li {display: inline;}
+#users .usertag .taglist {margin-bottom: 5px;}
+#users .userface {height: 85px; float: left; padding: 15px 5px 5px; width: 90px; text-align: center; background-color: #FFF;}
+#users .userface img {width: 66px; height: 66px;}
+#users .usernamex {text-align: center;}
+#users .usertag .reply-list li {display: block;}
+#users .userinfo .send-message {margin-right: 10px;}
+#users footer {background-color: #F2F0F0; float: left; padding: 5px 0; margin: 0; width: 100%; text-align: right;}
+#users footer a {margin-right: 10px;}

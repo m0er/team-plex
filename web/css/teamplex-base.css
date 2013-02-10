@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+
+body {padding-top: 70px;}
+textarea {resize: none;}
+.popover {z-index: 1030;}
+.visible {visibility: visible;}
+.not.visible {visibility: hidden;}
+
+/* Select2 placeholder fix */
+#signupForm .select2-input,
+#writePostForm .select2-input {width: 272px !important;}
+
+#users .select2-container,
+#posts .select2-container {width: 100% !important;}
+
+/* GNB */
+#topNav .navbar-inner {border-radius: 0;}
+#topNav .nav [class^="icon-"] {margin-right: 2px;}
+#topNav #inbox {padding: 10px 15px; cursor: pointer;}
+#topNav #inbox .notification {position: relative; float: right; top: -7px; right: 7px; padding: 1px 4px 2px;}
+#topNav #notification {width: 300px !important; margin: 0;}
+#topNav #notification [class*=span] {margin: 0}
+#topNav #notification abbr[title] {font-size: 0.8em; border-bottom: none; cursor: default;}
+#topNav #notification .thumbnail img {width: 50px; height: 50px;}
+#topNav #notification .popover-content article:nth-child(n+2) {margin-top: 5px; padding-top: 5px; border-top: 1px solid #EEE;}
+#topNav #notification .popover-content .row {margin-left: 8px;}
+#topNav #notification .popover-content .row .span3 {height: 60px;}
+#topNav #notification .popover-content .notification-content {margin-left: 10px; margin-bottom: 0; height: 3em;}
+
+/* SNB */
+#leftNav {margin-left: 50px;}
+
+/* Pinterest style post listing */
+#posts {margin-left: 0; width: 480px;}
+#posts .row {margin-left: 0;}
+#posts .post {position: absolute; border: 1px solid black; box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4); background-color: #FFF; padding: 5px 5px 0 5px; margin-bottom: 16px;}
+#posts .post > header, #posts .post > .content {cursor: pointer;}
+#posts .post .post-title {text-align: center;}
+#posts .post .content {padding: 0 5px;}
+#posts .post .taglist {margin-top: 5px;}
+#posts .post .icon-space {margin-right: 10px;}
+#posts .post footer {padding: 0; margin: 0; text-align: inherit; background-color: inherit; padding: 0 5px;}
+#posts .post footer .post-status {float: right;}
+#posts .post footer .post-writer {float: left; background-color: #F2F0F0; width: 100%; padding: 7px 10px; margin: 0 -10px;}
+#posts .post footer .post-writer a:first-child:HOVER {text-decoration: none;}
+
+#posts .modal-post .modal-header {min-height: 50px; padding: 15px; border: none;}
+#posts .modal-post .modal-header .post-content {float: left; margin: 10px 0; width: 100%;}
+#posts .modal-post .profile-image {float: left; margin-right: 10px; width: 50px; height: 50px;}
+#posts .modal-post .modal-body {clear: both; border-top: 1px solid #EEEEEE;}
+#posts .modal-post footer {margin-top: 0;}
+#posts .modal-post .modal-reply {text-align: left; background-color: #FFF;}
+#posts .modal-post .modal-reply .reply {height: 50px; margin-bottom: 10px;}
+#posts .modal-post .modal-reply .reply textarea {border: 1px solid; font-size: 1em; height: 32px; padding: 8px; width: 437px; border-color: #DDDDDD #E1DFDF #D1CDCD;}
+#posts .modal-post .modal-reply .reply:last-child {margin-bottom: 0;}
+#posts .modal-post .modal-reply .replyer-nickname {margin-bottom: 0;}
+
+/* humble footer */
+footer {margin-top: 30px; padding: 20px; text-align: center;}
