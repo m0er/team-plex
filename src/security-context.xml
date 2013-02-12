@@ -9,6 +9,7 @@
 	<http pattern="/resources" security="none" />
 
 	<http auto-config="true" use-expressions="true" disable-url-rewriting="true">
+		<intercept-url pattern="/" access="permitAll"/>
 		<intercept-url pattern="/favicon.ico" access="permitAll"/>
 		<intercept-url pattern="/css/**" access="permitAll"/>
 		<intercept-url pattern="/img/**" access="permitAll"/>
@@ -48,11 +49,10 @@
 
 	</http>
 	
-	<beans:bean id="raptozUserDetailsService" class="com.teamplex.spring.security.TeamplexUserDetailsService"/>
+	<beans:bean id="teamplexUserDetailsService" class="com.teamplex.spring.security.TeamplexUserDetailsService"/>
 	
 	<authentication-manager>
-		<authentication-provider user-service-ref="raptozUserDetailsService">
-		</authentication-provider>
+		<authentication-provider user-service-ref="teamplexUserDetailsService"/>
 	</authentication-manager>
 
 </beans:beans>

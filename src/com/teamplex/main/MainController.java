@@ -34,7 +34,7 @@ public class MainController {
 		return securityService.getCurrentUser();
 	}
 	
-	@RequestMapping("/index")
+	@RequestMapping({"/", "/index"})
 	public String index() {
 		return "main/index";
 	}
