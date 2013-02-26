@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+/*
+.ng-scope  {
+	border: 1px solid red;
+	margin: 3px;
+}
+*/
+
+div[contentEditable] {
+	cursor: pointer;
+	background-color: #D0D0D0;
+	margin-bottom: 1em;
+	padding: 1em;
+}
