@@ -108,9 +108,6 @@
 		TEAM-PLEX@2013
 	</footer>
 	 -->
-    <script id="entry-template" type="text/x-handlebars-template">
-		handlebars template content
-	</script>
 	<script type="text/javascript" >
         var PREFIX = '<c:url value="/"/>';
     </script>
