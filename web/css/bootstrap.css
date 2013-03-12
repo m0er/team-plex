@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v2.3.0
+ * Bootstrap v2.3.1
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -2286,6 +2286,8 @@ table th[class*="span"],
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
+
+/* Gray icons with optional class, or on hover/focus/active states of certain elements */
 
 .icon-gray,
 .nav-pills > .active > a > [class^="icon-"],
