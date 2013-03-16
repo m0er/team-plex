@@ -1,6 +1,5 @@
 @CHARSET "UTF-8";
 
-body {padding-top: 70px;}
 textarea {resize: none;}
 .popover {z-index: 1030;}
 .visible {visibility: visible;}

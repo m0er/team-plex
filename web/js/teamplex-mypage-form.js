@@ -1,5 +1,5 @@
 require.config({
-	baseUrl: PREFIX + 'js',
+	baseUrl: CONTEXT_PATH + 'js',
     paths: {
     	form: 'jquery-plugin/jquery.form',
     	plugins: 'jquery-plugin',
@@ -54,7 +54,7 @@ require(['bootstrap',
 			placeholder: "Input your interests",
 			minimumInputLength: 1,
 			ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
-				url: PREFIX + "tag/search",
+				url: CONTEXT_PATH + "tag/search",
 				dataType: 'json',
 				data: function (term, page) {
 					return {
@@ -74,7 +74,7 @@ require(['bootstrap',
 			var $wrapper = $inputPassword.parents(".control-group");
 			var id = $("#mypageInfo").attr("data-user-id");
 			var password = $(this).val();
-			var url = PREFIX + "/mypage/";
+			var url = CONTEXT_PATH + "/mypage/";
 			
 			$.ajax({
 				url : url + id + "/verify",
@@ -154,6 +154,6 @@ require(['bootstrap',
 			url = "img/twitter-cover" + parseInt(Math.random() * 9 + 1);
 		}
 		
-		return PREFIX + url + ".jpg";
+		return CONTEXT_PATH + url + ".jpg";
 	}
 });

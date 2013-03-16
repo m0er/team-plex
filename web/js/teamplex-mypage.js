@@ -1,5 +1,5 @@
 require.config({
-	baseUrl: PREFIX + 'js',
+	baseUrl: CONTEXT_PATH + 'js',
     paths: {
     	form: 'jquery-plugin/jquery.form',
     	plugins: 'jquery-plugin',
@@ -43,6 +43,6 @@ require(['bootstrap',
 			url = "img/twitter-cover" + parseInt(Math.random() * 9 + 1);
 		}
 		
-		return PREFIX + url + ".jpg";
+		return CONTEXT_PATH + url + ".jpg";
 	}
 });

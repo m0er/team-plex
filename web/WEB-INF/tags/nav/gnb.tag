@@ -6,16 +6,6 @@
 	<div class="navbar-inner">
 		<div class="container">
 			<a class="brand" href="<c:url value="/list"/>">TEAM-PLEX</a>
-			<form id="search" action="<c:url value="/list"/>" class="navbar-search pull-left" method="get">
-				<div class="control-group">
-					<div class="controls">
-						<div class="input-append">
-							<input class="span2" name="term" type="text" placeholder="Search"/>
-							<span class="add-on"><i class="icon-search"></i></span>
-						</div>
-					</div>
-				</div>
-			</form>
 			<ul class="nav pull-right">
 				<sec:authorize access="isAnonymous()">
 					<li><a data-toggle="modal" href="#loginForm">Login</a></li>

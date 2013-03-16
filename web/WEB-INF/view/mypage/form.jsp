@@ -76,7 +76,7 @@
 	<template:password-modal/>
 	
 	<script type="text/javascript" >
-        var PREFIX = '<c:url value="/"/>';
+		var CONTEXT_PATH = '<c:url value="/"/>';
     </script>
 	<script type="text/javascript" data-main="<c:url value="/js/teamplex-mypage-form"/>" src="<c:url value="/js/require-jquery.js"/>"></script>
 </body>
