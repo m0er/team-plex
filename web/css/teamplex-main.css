@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+
+.container h1 {text-align: center; font-size: 100px; line-height: normal;}
+.container .hero-unit {padding: 60px 0; background-color: white;}
+.container .hero-unit h2, .container .hero-unit p {text-align: center;}

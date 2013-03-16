@@ -1,4 +1,4 @@
-define('common/teamplex-common', ['jquery', 'plugins/jquery-contexturl'], function($) {
+define('common/teamplex-common', ['jquery', 'plugins/jquery-contexturl', 'holder'], function($) {
 	
 	$.fn.reverse = [].reverse;
 	

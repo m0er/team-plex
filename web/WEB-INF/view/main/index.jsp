@@ -13,16 +13,50 @@
 	<link rel="stylesheet" type="text/css" href="<c:url value="/css/bootstrap.css"/>"/>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/css/bootstrap-responsive.css"/>"/>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/css/teamplex-base.css"/>"/>
+	<link rel="stylesheet" type="text/css" href="<c:url value="/css/teamplex-main.css"/>"/>
 </head>
 <body>
-	<div class="navbar">
+	<nav class="navbar">
 		<div class="navbar-inner">
 			<a class="brand" href="/index">TEAM-PLEX</a>
-			<ul class="nav">
+			<ul class="nav pull-right">
 				<li><a href="/user/signin">Sign-in</a></li>
 				<li><a href="/user/login">Log-in</a></li>
 			</ul>
 		</div>
+	</nav>
+	
+	<div class="container">
+		<h1>TEAM-PLEX</h1>
+		
+		<section class="hero-unit">
+			<div class="row">
+				<div class="span4">
+					<div class="thumbnail">
+						<img alt="this is a post" src="holder.js/300x200"/>
+						<div class="caption">
+							<p>this is a post</p>
+						</div>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="thumbnail">
+						<img alt="this is a Toz" src="holder.js/300x200"/>
+						<div class="caption">
+							<p>this is a Toz</p>
+						</div>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="thumbnail">
+						<img alt="this is a dCafe" src="holder.js/300x200"/>
+						<div class="caption">
+							<p>this is a dCafe</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 
 	<script type="text/javascript" >
