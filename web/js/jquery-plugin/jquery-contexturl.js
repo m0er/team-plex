@@ -38,7 +38,7 @@
 			type = attribute == null ? null : attribute.name,
 			oldPath = attribute == null ? null : attribute.value;
 		
-		if ( attribute == null || oldPath.startsWith('http://') || oldPath.startsWith('https://') || oldPath.startsWith(CONTEXT_PATH) ) {
+		if ( attribute == null || oldPath.startsWith('http://') || oldPath.startsWith('https://') || oldPath.startsWith('data:') || oldPath.startsWith('holder.js') || oldPath.startsWith(CONTEXT_PATH) ) {
 			return;
 		}
 		
