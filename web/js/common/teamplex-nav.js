@@ -8,15 +8,6 @@ define('common/teamplex-nav', [
 	
 $(document).ready(function() {
 	
-	$("body").ezBgResize({
-		img: getBackgroundImageUrl()
-	});
-	
-	$("#bgChange").click(function(e) {
-		e.preventDefault();
-		$("#jq_ez_bg img").attr("src", "/img/paper.jpg");
-	});
-	
 	// Bootstrap에서 Modal 폼이 backdrop 뒤에 있는 현상 수정
 	// 참고: http://jsfiddle.net/ATeaH/8/
 	$('.modal').appendTo($('body'));
@@ -37,7 +28,7 @@ $(document).ready(function() {
 		placeholder: "Input your interests",
 		minimumInputLength: 1,
 		ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
-			url: PREFIX + "tag/search",
+			url: CONTEXT_PATH + "tag/search",
 			dataType: 'json',
 			data: function (term, page) {
 				return {
@@ -73,16 +64,5 @@ $(document).ready(function() {
 		$(".notification-timeago").timeago();
 	}
 });
-
-function getBackgroundImageUrl() {
-	var url = "";
-	if (parseInt(Math.random() * 2) == 1) {
-		url = "img/living.social.street" + parseInt(Math.random() * 9 + 1);
-	} else {
-		url = "img/twitter-cover" + parseInt(Math.random() * 9 + 1);
-	}
-	
-	return PREFIX + url + ".jpg";
-}
 
 });

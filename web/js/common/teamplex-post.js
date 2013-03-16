@@ -45,7 +45,7 @@ define('common/teamplex-post', [
 			console.log(params);
 			
 			$.ajax({
-				url: PREFIX + "reply/update",
+				url: CONTEXT_PATH + "reply/update",
 				data: params,
 				type: "POST"
 			}).done(function(reply) {
@@ -59,7 +59,7 @@ define('common/teamplex-post', [
 		
 		console.log(replyId);
 		
-		var url = PREFIX + "reply/delete/" + replyId;
+		var url = CONTEXT_PATH + "reply/delete/" + replyId;
 		$.get(url, function(data) {
 			$("#" + replyId).remove();
 		});
@@ -76,7 +76,7 @@ define('common/teamplex-post', [
 		e.preventDefault();
 		
 		var $section = $(e.target).parents(".modal-post");
-		window.location = PREFIX + "post/" + $section.attr("id").replace("postModal", "") + "/delete";
+		window.location = CONTEXT_PATH + "post/" + $section.attr("id").replace("postModal", "") + "/delete";
 	});
 	
 	$(".taglist").select2({
@@ -102,7 +102,7 @@ define('common/teamplex-post', [
 			return;
 		}
 		
-		var url = PREFIX + "post/" + postId;
+		var url = CONTEXT_PATH + "post/" + postId;
 		$.get(url, function(postAndReplies) {
 			console.log(postAndReplies);
 			
@@ -128,7 +128,7 @@ define('common/teamplex-post', [
 				placeholder: "Input your interests",
 				minimumInputLength: 1,
 				ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
-					url: PREFIX + "tag/search",
+					url: CONTEXT_PATH + "tag/search",
 					dataType: 'json',
 					data: function (term, page) {
 						return {
