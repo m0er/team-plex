@@ -1,5 +1,42 @@
 @CHARSET "UTF-8";
 
-.container h1 {text-align: center; font-size: 100px; line-height: normal;}
-.container .hero-unit {padding: 60px 0; background-color: white;}
-.container .hero-unit h2, .container .hero-unit p {text-align: center;}
+/* Main page common style */
+.container h1 {text-align: center; line-height: normal;}
+
+/* Guide common style */
+.guide {background-color: white; border: 1px solid #EEE; padding: 60px 79px;}
+.guide .page-header {border-bottom: none;}
+.guide .carousel-control.left {left: -60px;}
+.guide .carousel-control.right {right: -60px;}
+
+/* Guide specific style */
+.guide1,
+.guide5 {text-align: center;}
+.guide1 .row .span1 {margin: 10% 0;font-size: 60px;}
+
+.guide2 .fake-modal,
+.guide3 .fake-modal,
+.guide4 .fake-modal {
+	width: 450px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	border: 1px solid #999;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	*border: 1px solid #999;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	outline: none;
+	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-webkit-background-clip: padding-box;
+	   -moz-background-clip: padding-box;
+	        background-clip: padding-box;
+}
+
+.guide3 .fake-modal .reply {display: none;}
+.guide4 .fake-modal {float: left; margin-left: 30px; margin-top: 10px;}
+.guide5 .thumbnail {margin: 0 auto; width: 700px;}
+
+.modal-post .modal-header {min-height: 50px; padding: 15px; border: none;}.modal-post .modal-header .post-content {float: left; margin: 10px 0; width: 100%;}.modal-post .profile-image {float: left; margin-right: 10px; width: 50px; height: 50px;}.modal-post .modal-body {clear: both; border-top: 1px solid #EEEEEE;}.modal-post footer {margin-top: 0;}.modal-post .modal-reply {text-align: left; background-color: #FFF;}.modal-post .modal-reply .reply {height: 50px; margin-bottom: 10px;}.modal-post .modal-reply .reply textarea {border: 1px solid; font-size: 1em; height: 32px; padding: 8px; width: 437px; border-color: #DDDDDD #E1DFDF #D1CDCD;}.modal-post .modal-reply .reply:last-child {margin-bottom: 0;}.modal-post .modal-reply .replyer-nickname {margin-bottom: 0;}
