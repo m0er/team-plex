@@ -26,7 +26,18 @@ require(['jquerypp',
 		
 		$.initContextUrl();
 		
-		function guidePreprocess() {
+		$("[data-slide]").click(function(e) {
+			$(".carousel").bind('slide', prepareForGuide);
+			$(".carousel").bind('slid', guide);
+		});
+		
+		function prepareForGuide() {
+			$next.popover("destroy");
+			$(".guide3 .reply").hide();
+			$(".guide4 .fake-modal").first().nextAll().hide();
+		}
+		
+		function guide() {
 			var currentGuide = $guide.find(".carousel-inner .active").index();
 			
 			if (currentGuide == 0) {
@@ -34,10 +45,6 @@ require(['jquerypp',
 			} else {
 				$prev.show();
 			}
-			
-			$next.popover("destroy");
-			$(".guide3 .reply").hide();
-			$(".guide4 .fake-modal").first().nextAll().hide();
 			
 			if (currentGuide == 1) {
 				$next.popover({
@@ -99,18 +106,5 @@ require(['jquerypp',
 		function delay(func, delay) {
 			setTimeout(func, delay);
 		}
-		
-		$prev.click(function(e) {
-			$(".carousel").bind('slid', function() {
-				guidePreprocess();
-			});
-		});
-		
-		$next.click(function(e) {
-			$(".carousel").bind('slid', function() {
-				guidePreprocess();
-			});
-		});
-		
 	});
 });

@@ -8,6 +8,7 @@
 .guide .page-header {border-bottom: none;}
 .guide .carousel-control.left {left: -60px;}
 .guide .carousel-control.right {right: -60px;}
+#guide {min-height: 420px;}
 
 /* Guide specific style */
 .guide1,
