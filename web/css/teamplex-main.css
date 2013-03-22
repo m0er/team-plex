@@ -4,11 +4,23 @@
 .container h1 {text-align: center; line-height: normal;}
 
 /* Guide common style */
-.guide {background-color: white; border: 1px solid #EEE; padding: 60px 79px;}
-.guide .page-header {border-bottom: none;}
-.guide .carousel-control.left {left: -60px;}
-.guide .carousel-control.right {right: -60px;}
+.hero-unit {background-color: white; border: 1px solid #EEE; padding: 60px 79px;}
+.hero-unit .page-header {border-bottom: none;}
+.hero-unit .carousel-control.left {left: -60px;}
+.hero-unit .carousel-control.right {right: -60px;}
 #guide {min-height: 420px;}
+
+/* Guide post common style */
+.modal-post .modal-header {min-height: 50px; padding: 15px; border: none;}
+.modal-post .modal-header .post-content {float: left; margin: 10px 0; width: 100%;}
+.modal-post .profile-image {float: left; margin-right: 10px; width: 50px; height: 50px;}
+.modal-post .modal-body {clear: both; border-top: 1px solid #EEEEEE;}
+.modal-post footer {margin-top: 0;}
+.modal-post .modal-reply {text-align: left; background-color: #FFF;}
+.modal-post .modal-reply .reply {height: 50px; margin-bottom: 10px;}
+.modal-post .modal-reply .reply textarea {border: 1px solid; font-size: 1em; height: 32px; padding: 8px; width: 437px; border-color: #DDDDDD #E1DFDF #D1CDCD;}
+.modal-post .modal-reply .reply:last-child {margin-bottom: 0;}
+.modal-post .modal-reply .replyer-nickname {margin-bottom: 0;}
 
 /* Guide specific style */
 .guide1,
@@ -39,5 +51,3 @@
 .guide3 .fake-modal .reply {display: none;}
 .guide4 .fake-modal {float: left; margin-left: 30px; margin-top: 10px;}
 .guide5 .thumbnail {margin: 0 auto; width: 700px;}
-
-.modal-post .modal-header {min-height: 50px; padding: 15px; border: none;}.modal-post .modal-header .post-content {float: left; margin: 10px 0; width: 100%;}.modal-post .profile-image {float: left; margin-right: 10px; width: 50px; height: 50px;}.modal-post .modal-body {clear: both; border-top: 1px solid #EEEEEE;}.modal-post footer {margin-top: 0;}.modal-post .modal-reply {text-align: left; background-color: #FFF;}.modal-post .modal-reply .reply {height: 50px; margin-bottom: 10px;}.modal-post .modal-reply .reply textarea {border: 1px solid; font-size: 1em; height: 32px; padding: 8px; width: 437px; border-color: #DDDDDD #E1DFDF #D1CDCD;}.modal-post .modal-reply .reply:last-child {margin-bottom: 0;}.modal-post .modal-reply .replyer-nickname {margin-bottom: 0;}
