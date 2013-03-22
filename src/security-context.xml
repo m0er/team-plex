@@ -17,10 +17,10 @@
 		<intercept-url pattern="/index" access="permitAll"/>
 		<intercept-url pattern="/list" access="permitAll"/>
 		<intercept-url pattern="/list/*" access="permitAll"/>
-		<intercept-url pattern="/user/signup" access="permitAll" />
-		<intercept-url pattern="/user/login" access="permitAll" />
-		<intercept-url pattern="/user/login/form" access="permitAll" />
-		<intercept-url pattern="/user/logout" access="permitAll" />
+		<intercept-url pattern="/signup/*" access="isAnonymous()" />
+		<intercept-url pattern="/login" access="permitAll" />
+		<intercept-url pattern="/login/form" access="permitAll" />
+		<intercept-url pattern="/logout" access="permitAll" />
 		<intercept-url pattern="/tag/**" access="permitAll"/>
 		<intercept-url pattern="/post/*" access="permitAll"/>
 		<intercept-url pattern="/post/**" access="hasRole('ROLE_USER')"/>

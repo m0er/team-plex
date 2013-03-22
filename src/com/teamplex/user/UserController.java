@@ -13,7 +13,6 @@ import com.teamplex.tag.TagService;
 
 @Slf4j
 @Controller
-@RequestMapping("/user")
 public class UserController {
 	@Autowired UserService userService;
 	@Autowired TagService tagService;
