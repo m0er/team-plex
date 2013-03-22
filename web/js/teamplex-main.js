@@ -26,6 +26,12 @@ require(['jquerypp',
 		
 		$.initContextUrl();
 		
+		$("img").imagesLoaded(function() {
+			$(".container").fadeIn(function() {
+				$(this).removeClass("hide");
+			});
+		});
+		
 		$("[data-slide]").click(function(e) {
 			$(".carousel").bind('slide', prepareForGuide);
 			$(".carousel").bind('slid', guide);

@@ -25,18 +25,18 @@
 		</div>
 	</nav>
 	
-	<div class="container">
+	<div class="container hide">
 		<h1>TEAM-PLEX</h1>
 		
-		<section class="guide hero-unit">
+		<section class="hero-unit">
 			<div id="guide" class="carousel slide" data-interval="false">
 				<!-- Carousel items -->
 				<div class="carousel-inner">
-					<div class="active item guide1">
-						<div class="page-header">
+					<section class="active item guide1">
+						<header class="page-header">
 							<p>팀플렉스는 게임에 대해 서로의 생각과 도전을 공유하는 곳입니다.</p>
-						</div>
-						<div class="row">
+						</header>
+						<article class="row">
 							<div class="span3">
 								<div class="thumbnail">
 									<div class="caption">Post</div>
@@ -66,9 +66,9 @@
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="item guide2">
+						</article>
+					</section>
+					<section class="item guide2">
 						<section class="fake-modal modal-post">
 							<header class="modal-header">
 						 		<img class="profile-image" data-src="holder.js/50x50/social" alt="writer image" />
@@ -80,8 +80,8 @@
 							<article class="modal-body">
 						 	</article>
 						</section>
-					</div>
-					<div class="item guide3">
+					</section>
+					<section class="item guide3">
 						<section class="fake-modal modal-post">
 							<header class="modal-header">
 						 		<img class="profile-image" data-src="holder.js/50x50/social" alt="writer image" />
@@ -115,8 +115,8 @@
 							  	</div>
 						 	</article>
 						</section>
-					</div>
-					<div class="item guide4">
+					</section>
+					<section class="item guide4">
 						<section class="fake-modal modal-post">
 							<header class="modal-header">
 						 		<img class="profile-image" data-src="holder.js/50x50/social" alt="writer image" />
@@ -181,15 +181,40 @@
 							<article class="modal-body">
 						 	</article>
 						</section>
-					</div>
-					<div class="item guide5">
-						<div class="page-header">
+					</section>
+					<section class="item guide5">
+						<header class="page-header">
 							<p>하나의 커뮤니티가 탄생합니다.</p>
-						</div>
-						<div class="thumbnail">
+						</header>
+						<article class="thumbnail">
 							<img alt="this is a post" src="holder.js/700x300"/>
-						</div>
-					</div>
+						</article>
+					</section>
+					<section class="item guide6">
+						<header class="page-header">
+							<p>등록은 쉽습니다. 원하는 버튼을 눌러보세요:</p>
+						</header>
+						<article class="row">
+							<div class="span3">
+								<a href="/user/signup/twitter" class="thumbnail">
+									<img alt="twitter" src="<c:url value="/img/Twitter alt 2.png"/>"/>
+								</a>
+							</div>
+							<div class="span3">
+								<a href="/user/signup/facebook" class="thumbnail">
+									<img alt="facebook" src="<c:url value="img/Facebook alt 1.png"/>"/>
+								</a>
+							</div>
+							<div class="span3">
+								<a href="/user/signup/steam" class="thumbnail">
+									<img alt="steam" src="<c:url value="img/Steam alt.png"/>"/>
+								</a>
+							</div>
+						</article>
+						<footer>
+							<p><a href="/user/signup/email">이메일로 가입하려면 선택하세요.</a></p>
+						</footer>
+					</section>
 				</div>
 				<!-- Carousel nav -->
 				<a class="carousel-control left hide" href="#guide" data-slide="prev">&lsaquo;</a>
