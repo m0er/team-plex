@@ -15,6 +15,7 @@
 		<intercept-url pattern="/img/**" access="permitAll"/>
 		<intercept-url pattern="/js/**" access="permitAll"/>
 		<intercept-url pattern="/index" access="permitAll"/>
+		<intercept-url pattern="/guide/**" access="permitAll"/>
 		<intercept-url pattern="/list" access="permitAll"/>
 		<intercept-url pattern="/list/*" access="permitAll"/>
 		<intercept-url pattern="/signup/*" access="isAnonymous()" />
@@ -33,18 +34,18 @@
 		<intercept-url pattern="/test/**" access="permitAll"/>
 		<intercept-url pattern="/**" access="denyAll" />
 		
-		<form-login login-page="/user/login/form"
+		<form-login login-page="/login/form"
 			username-parameter="email"
 			password-parameter="password"
 			always-use-default-target="false"
-			login-processing-url="/user/login"
-			authentication-failure-url="/user/login/failure" 
+			login-processing-url="/login"
+			authentication-failure-url="/login/failure" 
 			default-target-url="/list" />
 			
 		<access-denied-handler error-page="/denied" />
 		
 		<logout invalidate-session="true"
-			logout-url="/user/logout"
+			logout-url="/logout"
 			logout-success-url="/list" />
 
 	</http>
