@@ -17,7 +17,7 @@ public class UserController {
 	@Autowired UserService userService;
 	@Autowired TagService tagService;
 	
-	@RequestMapping(value="/signup", method=RequestMethod.POST)
+	@RequestMapping(value="/signin", method=RequestMethod.POST)
 	public String signup(User user, @RequestParam("profileImage") MultipartFile profileImage) {
 		log.info("signup user info: {}", user.toString());
 		log.info("File '{}' uploaded successfully", profileImage.getOriginalFilename());

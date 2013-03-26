@@ -196,23 +196,23 @@
 						</header>
 						<article class="row">
 							<div class="span3">
-								<a href="/user/signup/twitter" class="thumbnail">
+								<a href="/user/signin/twitter" class="thumbnail">
 									<img alt="twitter" src="<c:url value="/img/Twitter alt 2.png"/>"/>
 								</a>
 							</div>
 							<div class="span3">
-								<a href="/user/signup/facebook" class="thumbnail">
+								<a href="/user/signin/facebook" class="thumbnail">
 									<img alt="facebook" src="<c:url value="img/Facebook alt 1.png"/>"/>
 								</a>
 							</div>
 							<div class="span3">
-								<a href="/user/signup/steam" class="thumbnail">
+								<a href="/user/signin/steam" class="thumbnail">
 									<img alt="steam" src="<c:url value="img/Steam alt.png"/>"/>
 								</a>
 							</div>
 						</article>
 						<footer>
-							<p><a href="/user/signup/email">이메일로 가입하려면 선택하세요.</a></p>
+							<p><a href="/user/signin/email">이메일로 가입하려면 선택하세요.</a></p>
 						</footer>
 					</section>
 				</div>
