@@ -19,8 +19,8 @@
 	<nav class="navbar">
 		<div class="navbar-inner">
 			<ul class="nav pull-right">
-				<li><a href="/signin">Sign-in</a></li>
-				<li><a href="/login">Log-in</a></li>
+				<li><a href="/signin">Sign in</a></li>
+				<li><a href="/login">Login</a></li>
 			</ul>
 		</div>
 	</nav>
