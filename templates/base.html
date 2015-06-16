@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head lang="ko">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block page_title %}TEAM-PLEX{% endblock %}</title>
+    <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    <script src="{% static 'jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'bootstrap/dist/js/bootstrap.js' %}"></script>
+</body>
+</html>
