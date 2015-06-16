@@ -129,4 +129,5 @@ BOWER_COMPONENTS_ROOT = PROJECT_ROOT + '/components/'
 BOWER_INSTALLED_APPS = (
     'bootstrap#3.3.4',
     'jquery#2.1.4',
+    'holderjs#2.8.0'
 )
