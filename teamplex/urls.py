@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """teamplex URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,6 +18,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from prototype import urls as prototype_urls
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^prototype/', include(prototype_urls)),
 ]
