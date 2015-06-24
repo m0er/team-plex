@@ -125,3 +125,4 @@ crashlytics-build.properties
 # etc
 /static
 **/css/*.css
+/components
