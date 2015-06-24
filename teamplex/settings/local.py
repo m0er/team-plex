@@ -126,7 +126,6 @@ STATICFILES_DIRS = (
 
 BOWER_COMPONENTS_ROOT = PROJECT_ROOT + '/components/'
 BOWER_INSTALLED_APPS = (
-    'bootstrap#3.3.4',
-    'jquery#2.1.4',
-    'holderjs#2.8.0'
+    'bootstrap#3.3.5',
+    'holderjs#2.8.0',
 )
