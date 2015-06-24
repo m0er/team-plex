@@ -121,3 +121,6 @@ crashlytics-build.properties
 
 # SQLite
 *.sqlite3
+
+# etc
+/static
