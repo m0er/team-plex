@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block style %}
+    <link href="{% static 'prototype/css/prototype.css' %}" rel="stylesheet"/>
+{% endblock %}
+
 {% block content %}
     <h1>Hello, World!</h1>
 {% endblock %}
