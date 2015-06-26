@@ -4,6 +4,7 @@
 
 $(document).ready(function() {
 
+    window.scrollTo(0, 0);
 
     Mousetrap.bind('right', function() {
         var $currentItem = $('.focus'),
