@@ -46,4 +46,16 @@ $(document).ready(function() {
         }
     });
 
+    Mousetrap.bind('enter', function() {
+        var $modal = $('#item-modal');
+        var $currentItem = $('.focus');
+        $modal.find('.modal-body').text($currentItem.text());
+        $modal.modal();
+    });
+
+    $('#item-modal').on('shown.bs.modal', function () {
+        $(this).focus();
+    });
+
+    //todo - 키보드 상하좌우 이벤트에 따른 아이템 이동
 });
