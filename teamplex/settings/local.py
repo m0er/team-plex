@@ -119,9 +119,6 @@ STATICFILES_FINDERS = (
     'djangobower.finders.BowerFinder',
 )
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'prototype/static'),
-)
 
 BOWER_COMPONENTS_ROOT = PROJECT_ROOT + '/components/'
 BOWER_INSTALLED_APPS = (
