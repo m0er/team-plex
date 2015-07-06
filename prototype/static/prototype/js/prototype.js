@@ -2,17 +2,33 @@
  * Created by moer on 15. 6. 16..
  */
 
+$.fn.isNavItem = function() {
+    var result = false,
+        $currentItem = $(this[0]);
+
+    $currentItem.parents().each(function(index, item) {
+        var $item = $(item);
+        if ($item.hasClass('navbar') || $item.hasClass('nav')) {
+            result = true;
+        }
+    });
+
+    return result;
+};
+
 $(document).ready(function() {
 
     window.scrollTo(0, 0);
 
     Mousetrap.bind('up', function() {
        var $currentItem = $('.focus'),
-           $currentRow = $currentItem.closest('.item-container'),
+           isNavItem = $currentItem.isNavItem(),
+           $currentRow = !isNavItem ? $currentItem.closest('.item-container') : null,
            $mainContainer = $('#container'),
-           $upperRowItem = $currentItem.parent().prev().children().first();
+           $navbar = $('.navbar-right'),
+           $upperRowItem = $currentRow ? $currentItem.parent().prev().children().first() : null;
 
-        if ($upperRowItem.size() > 0) {
+        if ($upperRowItem && $upperRowItem.size() > 0) {
             $currentItem.removeClass('focus');
             $upperRowItem.addClass('focus');
 
@@ -30,14 +46,19 @@ $(document).ready(function() {
                 $mainContainer.removeClass('down-' + index--);
                 $mainContainer.addClass('down-' + index);
             }
+        } else if (!isNavItem) {
+            $currentItem.attr('data-last-read-post', true);
+            $currentItem.removeClass('focus');
+            $navbar.children().first().addClass('focus');
         }
     });
 
     Mousetrap.bind('down', function() {
        var $currentItem = $('.focus'),
-           $currentRow = $currentItem.closest('.item-container'),
+           isNavItem = $currentItem.isNavItem(),
+           $currentRow = !isNavItem ? $currentItem.closest('.item-container') : null,
            $mainContainer = $('#container'),
-           $bottomRowItem = $currentItem.parent().next().children().first();
+           $bottomRowItem = $currentItem ? $currentItem.parent().next().children().first() : null;
 
         if ($bottomRowItem.size() > 0) {
             $currentItem.removeClass('focus');
@@ -57,15 +78,19 @@ $(document).ready(function() {
             } else {
                 $mainContainer.addClass('down-1');
             }
+        } else if (isNavItem) {
+            $currentItem.removeClass('focus');
+            $('[data-last-read-post]').addClass('focus').removeAttr('data-last-read');
         }
     });
 
     Mousetrap.bind('left', function() {
         var $currentItem = $('.focus'),
-            $currentRow = $currentItem.closest('.item-container'),
+            isNavItem = $currentItem.isNavItem(),
+            $currentRow = !isNavItem ? $currentItem.closest('.item-container') : null,
             $prevItem = $currentItem.prev();
 
-        if ($prevItem.size() > 0) {
+        if (!isNavItem && $prevItem.size() > 0) {
             $currentItem.removeClass('focus');
             $prevItem.addClass('focus');
 
@@ -77,15 +102,19 @@ $(document).ready(function() {
                 $currentRow.removeClass('right-' + index--);
                 $currentRow.addClass('right-' + index);
             }
+        } else if (isNavItem && $prevItem.size() > 0) {
+            $currentItem.removeClass('focus');
+            $prevItem.addClass('focus');
         }
     });
 
     Mousetrap.bind('right', function() {
         var $currentItem = $('.focus'),
-            $currentRow = $currentItem.closest('.item-container'),
-            $nextItem = $currentItem.next('.item');
+            isNavItem = $currentItem.isNavItem(),
+            $currentRow = !isNavItem ? $currentItem.closest('.item-container') : null,
+            $nextItem = $currentItem.next();
 
-        if ($nextItem.size() > 0) {
+        if (!isNavItem && $nextItem.size() > 0) {
             $currentItem.removeClass('focus');
             $nextItem.addClass('focus');
 
@@ -97,15 +126,22 @@ $(document).ready(function() {
             } else {
                 $currentRow.addClass('right-1');
             }
+        } else if (isNavItem && $nextItem.size() > 0) {
+            $currentItem.removeClass('focus');
+            $nextItem.addClass('focus');
         }
     });
 
     Mousetrap.bind('enter', function() {
-        var $modal = $('#item-modal');
-        var $currentItem = $('.focus');
-        $modal.find('.modal-title').text($currentItem.find('h4').text());
-        $modal.find('.modal-body').text($currentItem.find('div').text());
-        $modal.modal();
+        var $modal = $('#item-modal'),
+            $currentItem = $('.focus'),
+            isNavItem = $currentItem.isNavItem();
+
+        if (!isNavItem) {
+            $modal.find('.modal-title').text($currentItem.find('h4').text());
+            $modal.find('.modal-body').text($currentItem.find('div').text());
+            $modal.modal();
+        }
     });
 
     $('#item-modal').on('shown.bs.modal', function () {
