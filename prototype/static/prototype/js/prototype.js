@@ -3,24 +3,28 @@
  */
 
 $(document).ready(function() {
+    var lastSelected = {},
+        rowKey = 'data-row-index',
+        colKey = 'data-col-index';
 
     window.scrollTo(0, 0);
 
     Mousetrap.bind('up', function() {
        var $currentItem = $('.focus'),
-           $currentRow = $currentItem.closest('.item-container'),
            $mainContainer = $('#container'),
            $upperRowItem = $currentItem.parent().prev().children().first();
 
         if ($upperRowItem.size() > 0) {
             $currentItem.removeClass('focus');
-            $upperRowItem.addClass('focus');
 
-            if (new RegExp('right-').test($currentRow.attr('class'))) {
-                var index = $currentRow.attr('class').replace('item-container right-', '');
-
-                $currentRow.removeClass('right-' + index);
+            var upperLastIndex = lastSelected[rowKey + $upperRowItem.parent().attr(rowKey)];
+            if (upperLastIndex !== undefined && upperLastIndex != 0) {
+                var $selectedUpperRowItem = $($currentItem.parent().prev().children()[upperLastIndex - 1]);
+                $selectedUpperRowItem.addClass('focus');
+            } else {
+                $upperRowItem.addClass('focus');
             }
+
 
             if (new RegExp('down-1').test($mainContainer.attr('class'))) {
                 $mainContainer.removeClass('down-1');
@@ -35,19 +39,20 @@ $(document).ready(function() {
 
     Mousetrap.bind('down', function() {
        var $currentItem = $('.focus'),
-           $currentRow = $currentItem.closest('.item-container'),
            $mainContainer = $('#container'),
            $bottomRowItem = $currentItem.parent().next().children().first();
 
         if ($bottomRowItem.size() > 0) {
             $currentItem.removeClass('focus');
-            $bottomRowItem.addClass('focus');
 
-            if (new RegExp('right-').test($currentRow.attr('class'))) {
-                var index = $currentRow.attr('class').replace('item-container right-', '');
-
-                $currentRow.removeClass('right-' + index);
+            var bottomLastIndex = lastSelected[rowKey + $bottomRowItem.parent().attr(rowKey)];
+            if (bottomLastIndex !== undefined && bottomLastIndex != 0) {
+                var $selectedBottomRowItem = $($currentItem.parent().next().children()[bottomLastIndex - 1]);
+                $selectedBottomRowItem.addClass('focus');
+            } else {
+                $bottomRowItem.addClass('focus');
             }
+
 
             if (new RegExp('down-').test($mainContainer.attr('class'))) {
                 var index = $mainContainer.attr('class').replace('container-fluid down-', '');
@@ -69,6 +74,8 @@ $(document).ready(function() {
             $currentItem.removeClass('focus');
             $prevItem.addClass('focus');
 
+            lastSelected[rowKey + $currentRow.attr(rowKey)] = $prevItem.attr(colKey);
+
             if (new RegExp('right-1').test($currentRow.attr('class'))) {
                 $currentRow.removeClass('right-1');
             } else if (new RegExp('right-').test($currentRow.attr('class'))) {
@@ -88,6 +95,8 @@ $(document).ready(function() {
         if ($nextItem.size() > 0) {
             $currentItem.removeClass('focus');
             $nextItem.addClass('focus');
+
+            lastSelected[rowKey + $currentRow.attr(rowKey)] = $nextItem.attr(colKey);
 
             if (new RegExp('right-').test($currentRow.attr('class'))) {
                 var index = $currentRow.attr('class').replace('item-container right-', '');
