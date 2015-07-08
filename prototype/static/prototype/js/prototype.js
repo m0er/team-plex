@@ -22,6 +22,7 @@ $(document).ready(function() {
         colKey = 'data-col-index';
 
     window.scrollTo(0, 0);
+    $('.focus').focus();
 
     Mousetrap.bind('up', function() {
        var $currentItem = $('.focus'),
