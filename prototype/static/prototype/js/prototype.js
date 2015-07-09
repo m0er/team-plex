@@ -24,12 +24,6 @@ $(document).ready(function() {
     window.scrollTo(0, 0);
     $('.focus').focus();
 
-    $('#wrapper').css({
-        'background-image': 'url("http://cdn.superbwallpapers.com/wallpapers/games/fez-17300-1366x768.jpg")',
-        'background-repeat': 'no-repeat',
-        'background-size': screen.width + 'px ' + screen.height + 'px'
-    });
-
     Mousetrap.bind('up', function() {
        var $currentItem = $('.focus'),
            isNavItem = $currentItem.isNavItem(),
