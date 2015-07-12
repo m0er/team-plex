@@ -1,21 +1,22 @@
-# TEAM-PLEX v0 Prototype
+# TEAM-PLEX v0 프로토타입
 
 TEAM-PLEX는 게이머를 위한 깊이있는 커뮤니티를 제공해 사용자 스스로가 그 안에서 성장 할 수 있게하며, 도전 할 수 있는 계기를 제공한다.
 
-## TEAM-PLEX Major Version Plan
+## 계획
 메이저 버전에 따른 팀플렉스 개발 방향:
-* 0 : 프로토타입
-* 1 : 커뮤니티
-* 2 : 래더 및 방송
-* 3 : TBD
+* 0 : INDIE-PLEX.
+* 1 : TEAM-PLEX 커뮤니티로 전환.
+* 2 : 래더/팀 관리 및 멀티미디어 컨텐츠.
+* 3 : 리그 및 스폰서.
 
-## Current Objective
-* 2015 : 프로토타입 완료.
+## 목표
+* 2015.12 : INDIE-PLEX 프로토타입 완료 및 커뮤니티 운영 시작.
+* 2020 ~ : TEAM-PLEX 커뮤니티로 전환.
 
-## Versioning
+## 버전 관리
 `<major>.<minor>.<patch>`
 
 버전관리 지침: [http://www.semver.org](http://www.semver.org)
 
-## Feedback
-버그 및 피드백은 Issue 등록하고 마일스톤과 레이블 추가
+## 피드백
+트렐로에서 관리: [TEAM-PLEX 프로토타입 개발 보드](https://trello.com/b/bpibTgC2/prototype)
