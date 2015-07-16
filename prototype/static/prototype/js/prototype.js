@@ -88,7 +88,7 @@ $(document).ready(function() {
             }
         } else if (isNavItem) {
             $currentItem.removeClass('focus');
-            $('[data-last-read-post]').addClass('focus').removeAttr('data-last-read');
+            $('[data-last-read-post]').addClass('focus').removeAttr('data-last-read-post');
         }
     });
 
@@ -159,4 +159,7 @@ $(document).ready(function() {
     $('#item-modal').on('shown.bs.modal', function () {
         $(this).focus();
     });
+
+    //todo - card, dialog add profile image
+    //todo - reply's & submit button into dialog
 });
